@@ -1,0 +1,32 @@
+ 
+Arcade1Up marvel cabinet volume control instructions
+1. extend your volume control wires to reach your raspberry pi. use the stock connector making sure to keep the colors the same. 
+2. plug the connector to the raspbarry pi. 
+ the red wire should be on the very bottom left pin. reference the pi3_gpio.png 
+    a. red wire to pin #39 Ground
+    b. white wire to pin #37 GPIO26
+    c. blue wire to pin #35 GPIO19
+ 
+3. in your home directory create a folder named pivolume
+    a. mkdir /home/pi/pivolume
+    b. cd /pivolume
+ 
+4. install python-alsaaudio
+    a. sudo apt install python-alsaaudio
+ 
+5. download the script pivolume.py or download the raw code off of githug and create your own file named pivolume.py
+    a. place in the /home/pi/pivolume directory. 
+    
+6. run script and test
+    a. in the /home/pi/pivolume directory run command
+    python pivolume.py
+    b. you should see what volume you are currently at on the command line
+    c. move the volume slider right and left. you should see a new line with the new volume going up and down as you move.
+    d. ctrl+c to exit
+7. add script to run everytime it boots with crontab. you can do this other ways. this worked for me
+    a. enter crontab in edit mode
+    b. crontab -e
+    c. add a line to crontab
+    @reboot /home/pi/pivolume/python pivolume.py
+8. reboot and enter emulationstation try a game and test the volume. I have not tried on all systems but it has worked so far on ones I use the most. 
+    
