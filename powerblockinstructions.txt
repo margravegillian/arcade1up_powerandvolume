@@ -1,0 +1,8 @@
+for installing petrock powerblock to raspberry pi on arcade1up marvel or gen3 cabinet
+
+1. currently I just used the instructions at their website. 
+
+https://blog.petrockblock.com/2015/07/04/powerblock-another-power-switch-for-the-raspberry-pi/
+
+I can write something up if requested. 
+thanks
