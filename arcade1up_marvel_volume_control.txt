@@ -18,15 +18,18 @@ Arcade1Up marvel cabinet volume control instructions
     a. place in the /home/pi/pivolume directory. 
     
 6. run script and test
-    a. in the /home/pi/pivolume directory run command
+    a. make the script executable 
+    chmod +x /home/pi/pivolume/pivolume.py 
+
+    b.in the /home/pi/pivolume directory run command
     python pivolume.py
-    b. you should see what volume you are currently at on the command line
-    c. move the volume slider right and left. you should see a new line with the new volume going up and down as you move.
-    d. ctrl+c to exit
+    c. you should see what volume you are currently at on the command line
+    d. move the volume slider right and left. you should see a new line with the new volume going up and down as you move.
+    e. ctrl+c to exit
 7. add script to run everytime it boots with crontab. you can do this other ways. this worked for me
     a. enter crontab in edit mode
     b. crontab -e
     c. add a line to crontab
-    @reboot /home/pi/pivolume/python pivolume.py
+    @reboot /home/pi/pivolume/pivolume.py
 8. reboot and enter emulationstation try a game and test the volume. I have not tried on all systems but it has worked so far on ones I use the most. 
     
